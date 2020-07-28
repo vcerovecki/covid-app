@@ -1,50 +1,50 @@
 .modal {
-    left: calc(50% - 335px) !important;
-    display: block !important;
-    width: 670px !important;
-    height: fit-content !important;
-    margin: 119px auto;
-    box-shadow: 0px 1px 3px #12181d;
-    background-color: #0766ce;
-    padding: 15px;
-    border-radius: 4px;
-    font-size: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, "Josefin Sans", "Amaranth", "Acme", "Lato", sans-serif;
-    opacity: 0;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+  left: calc(50% - 335px) !important;
+  display: block !important;
+  width: auto !important;
+  height: fit-content !important;
+  margin: 119px auto;
+  box-shadow: 0px 1px 3px #12181d;
+  background-color: #0766ce;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Josefin Sans", "Amaranth",
+    "Acme", "Lato", sans-serif;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .modal-message {
-    position: absolute;
-    top: 32%;
-    color: #ffffff;
+  position: absolute;
+  top: 32%;
+  color: #ffffff;
 }
 
 .modal-button {
-    display: block;
-    float: right;
-    background-color: transparent;
-    color: #f7f7f7;
-    border: 1px solid #f7f7f7;
-    border-radius: 6px;
-    padding: 10px;
+  display: block;
+  float: right;
+  background-color: transparent;
+  color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  border-radius: 6px;
+  padding: 10px;
 }
 
 .modal-button:hover {
-	background-color: #0b6dd6;
+  background-color: #0b6dd6;
 }
-	
 
 .modal-background {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 100;
-    background-color: #00000054;
-    height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #00000054;
+  height: 100%;
 }
