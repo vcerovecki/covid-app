@@ -37,6 +37,17 @@ export default class ZupanijeList extends Component {
     });
   };
 
+  dohvatiPodatkeZupanijeZadnjiDan = (zupanija) => {
+    axiosInstance.get("/getLastDayDataForCountry/" + zupanija.idZupanija).then((res) => {
+      const podaciZupanije = res.data;
+      this.setState({
+        podaciZupanije: podaciZupanije,
+        prikaziPodatkeZupanije: true,
+        showModal: true
+      });
+    });
+  };
+
   modalClose = () => {
     this.setState({
       showModal: false,
@@ -76,6 +87,7 @@ export default class ZupanijeList extends Component {
           (<ZupanijeTable
             zupanijeList={this.state.zupanije}
             dohvatiPodatkeZupanije={this.dohvatiPodatkeZupanije}
+            dohvatiZadnjiDan={this.dohvatiPodatkeZupanijeZadnjiDan}
           />)}
       </React.Fragment>
     );

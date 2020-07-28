@@ -15,7 +15,18 @@ const zupanijeTable = (props) => {
             props.dohvatiPodatkeZupanije(zupanija);
           }}
         >
-          Dohvati podatke
+          Ukupno stanje
+        </Button>
+      </td>
+      <td>
+        <Button
+          className="table-button-promijeni"
+          onClick={(event) => {
+            event.preventDefault();
+            props.dohvatiZadnjiDan(zupanija);
+          }}
+        >
+          Posljednjih 24 sata
         </Button>
       </td>
     </tr>
@@ -26,7 +37,8 @@ const zupanijeTable = (props) => {
         <tr>
           <th>ID</th>
           <th>Naziv</th>
-          <th>Promijeni</th>
+          <th>Ukupno stanje</th>
+          <th>Posljednjih 24 sata</th>
         </tr>
       </thead>
       <tbody>{zupanijeList}</tbody>
