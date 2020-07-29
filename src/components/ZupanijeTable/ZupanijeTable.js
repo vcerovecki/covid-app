@@ -1,6 +1,6 @@
 import React from "react";
 import { Table, Button } from "react-bootstrap";
-import "./StudentTable.css";
+import "./ZupanijeTable.css";
 
 const zupanijeTable = (props) => {
   const zupanijeList = props.zupanijeList.map((zupanija, i) => (
