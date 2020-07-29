@@ -52,7 +52,7 @@ export default class NajnovijiPodaci extends Component {
     }
     populateArray = () => {
         var data = [];
-        for (var i = this.state.zupanije.length; i--;) {
+        for (var i = 0; i < this.state.zupanije.length; i++) {
             var tmp = [];
 
             var lastData = this.state.zupanije[i];
@@ -68,7 +68,7 @@ export default class NajnovijiPodaci extends Component {
     populateArrayForLastDay = () => {
         var data = [];
         console.log(this.state.lastDay.length);
-        for (var i = this.state.lastDay.length; i--;) {
+        for (var i = 0; i < this.state.lastDay.length; i++) {
             var tmp = [];
 
             var lastData = this.state.lastDay[i];
