@@ -4,7 +4,7 @@ import axiosInstance from "../../api/utils/axiosInstance";
 
 export default class StudentInput extends Component {
     state = {
-        label: "Najnoviji podaci",
+        label: "Najnoviji dostupni podaci",
         studentFirstName: "",
         studentLastName: "",
         studentEmail: "",
