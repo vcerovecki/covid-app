@@ -14,7 +14,7 @@ export default class NajnovijiPodaci extends Component {
         lastDayData: [],
         data: [],
         zupanije: [],
-        labels: ['Zaraženih', 'Umrl'],
+        labels: ['Zaraženih', 'Umrli'],
         colors: ['#F2317A', '#7B43A1'],
         lastDayLabels: ['Zaraženih', 'Umrlih']
     }
