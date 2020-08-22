@@ -7,8 +7,7 @@ import "./Navigation.css";
 const navigation = () => {
   return (
     <Navbar>
-      <img className="logo" src={coronaLogo} alt="corona" />
-      <strong className="estudent">eCorona</strong>
+      <a href="/"><strong className="estudent">eCorona</strong></a>
       <Nav className="nav-tekst">
         <NavLink className="navbar-link" to="/" exact>
           Najnoviji podaci
