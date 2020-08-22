@@ -4,7 +4,9 @@ import "./NajnovijiPodaci.css";
 export default class Legend extends Component {
     render = () => {
         var labels = this.props.labels,
-            colors = this.props.colors;
+            colors = this.props.colors,
+            sumZarazeni = this.props.sumZarazeni,
+            sumUmrli = this.props.sumUmrli;
 
         return (
             <div className="Legend">
@@ -13,6 +15,7 @@ export default class Legend extends Component {
                         <div>
                             <span className="Legend--color" style={{ backgroundColor: colors[labelIndex % colors.length] }} />
                             <span className="Legend--label">{label}</span>
+                    <span className="Legend--label">{label.toLowerCase().includes("zaraženih") ? sumZarazeni : sumUmrli}</span>
                         </div>
                     );
                 })}
