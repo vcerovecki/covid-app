@@ -55,10 +55,10 @@ export default class NajnovijiPodaci extends Component {
     populateArray = () => {
         var data = [];
         var pureDate = new Date(this.state.zupanije[0].datum);
-        const dateFormat = new Intl.DateTimeFormat('hr', {year: 'numeric', month: '2-digit', day: "2-digit"});
-        const [{ value: day },,{ value: month },,{ value: year }] = dateFormat.formatToParts(pureDate);
+        const dateFormat = new Intl.DateTimeFormat('hr', { year: 'numeric', month: '2-digit', day: "2-digit" });
+        const [{ value: day }, , { value: month }, , { value: year }] = dateFormat.formatToParts(pureDate);
         this.setState({
-            datum: `${day}.${month}.${year }`
+            datum: `${day}.${month}.${year}`
         });
         for (var i = 0; i < this.state.zupanije.length; i++) {
             var tmp = [];
@@ -91,7 +91,7 @@ export default class NajnovijiPodaci extends Component {
 
     izracunajSumuZarazenihUkupno = () => {
         var suma = 0;
-        this.state.zupanije.forEach(function(data){
+        this.state.zupanije.forEach(function (data) {
             suma += data.brojZarazenih;
         });
         return "(" + suma + ")";
@@ -99,7 +99,7 @@ export default class NajnovijiPodaci extends Component {
 
     izracunajSumuUmrlihUkupno = () => {
         var suma = 0;
-        this.state.zupanije.forEach(function(data){
+        this.state.zupanije.forEach(function (data) {
             suma += data.brojUmrlih;
         });
         return "(" + suma + ")";
@@ -107,7 +107,7 @@ export default class NajnovijiPodaci extends Component {
 
     izracunajSumuZarazenihLastDay = () => {
         var suma = 0;
-        this.state.lastDay.forEach(function(data){
+        this.state.lastDay.forEach(function (data) {
             suma += data.brojZarazenih;
         });
         return "(" + suma + ")";
@@ -115,7 +115,7 @@ export default class NajnovijiPodaci extends Component {
 
     izracunajSumuUmrlihLastDay = () => {
         var suma = 0;
-        this.state.lastDay.forEach(function(data){
+        this.state.lastDay.forEach(function (data) {
             suma += data.brojUmrlih;
         });
         return "(" + suma + ")";
@@ -124,16 +124,16 @@ export default class NajnovijiPodaci extends Component {
     render = () => {
         return (
             <section>
-                <h3>Ukupno do posljednjeg ažuriranja (Posljednje ažuriranje: {this.state.datum} 15:00)</h3>
+                <h3>Ukupno do posljednjeg ažuriranja (Posljednje ažuriranje: {this.state.datum} 11:00)</h3>
                 <Charts
                     data={this.state.data}
                     labels={this.state.zupanije.map(a => a.zupanija)}
                     colors={this.state.colors}
                     height={250}
                 />
-                <Legend labels={this.state.labelsUkupno} colors={this.state.colors} sumZarazeni={this.izracunajSumuZarazenihUkupno()} sumUmrli={this.izracunajSumuUmrlihUkupno()}/>
+                <Legend labels={this.state.labelsUkupno} colors={this.state.colors} sumZarazeni={this.izracunajSumuZarazenihUkupno()} sumUmrli={this.izracunajSumuUmrlihUkupno()} />
                 <br></br>
-                <h3>Posljednjih 24 sata (Posljednje ažuriranje: {this.state.datum} 15:00)</h3>
+                <h3>Posljednjih 24 sata (Posljednje ažuriranje: {this.state.datum} 11:00)</h3>
                 <Charts
                     data={this.state.lastDayData}
                     labels={this.state.lastDay.map(a => a.zupanija)}
